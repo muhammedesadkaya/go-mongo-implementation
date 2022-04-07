@@ -34,7 +34,7 @@ func main() {
 	var userRepository = repository.NewUserRepository(mongoDbClient, DATABASE_NAME)
 
 	router := gin.Default()
-	v1 := router.Group("/v1/api")
+	v1 := router.Group("/api/v1")
 	{
 		v1.GET("/users", func(ctx *gin.Context) {
 			api.GetUsers(ctx, userRepository)

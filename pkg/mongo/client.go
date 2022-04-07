@@ -45,9 +45,9 @@ func (c *Client) CreateIndex(fields []string, isUnique bool, indexName, database
 		Background: true,
 	}
 
-	col := localSession.DB(databaseName).C(collectionName)
+	collection := localSession.DB(databaseName).C(collectionName)
 
-	if err := col.EnsureIndex(index); err != nil {
+	if err := collection.EnsureIndex(index); err != nil {
 		return err
 	}
 
