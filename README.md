@@ -2,6 +2,8 @@
 
 This project has been prepared for the purpose of example of MongoDB integration with Golang v1.18
 
+Documentation (Turkish): <https://muhammedesadkaya.medium.com/golang-ile-mongodb-implementasyonu-605954fb00d4>
+
 ## Libraries
 
 1. globalsign/mgo
