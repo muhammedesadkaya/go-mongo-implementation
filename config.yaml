@@ -1,0 +1,4 @@
+mongodb:
+  username: "<username>"
+  password: "<pwd>"
+  host: "<host>"
