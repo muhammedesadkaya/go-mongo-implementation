@@ -12,7 +12,7 @@ import (
 
 const (
 	TIMEOUT       = 10
-	DATABASE_NAME = "test"
+	DATABASE_NAME = "users"
 )
 
 var (

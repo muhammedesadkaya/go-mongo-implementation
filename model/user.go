@@ -12,3 +12,16 @@ type User struct {
 	IsDelete    bool      `json:"isDelete" bson:"IsDelete"`
 	CreateDate  time.Time `json:"createDate" bson:"CreateDate"`
 }
+
+func NewUser(fullName, identity, phoneNumber, email, gender string) *User {
+	return &User{
+		FullName:    fullName,
+		Identity:    identity,
+		PhoneNumber: phoneNumber,
+		Email:       email,
+		Gender:      gender,
+		IsActive:    true,
+		IsDelete:    false,
+		CreateDate:  time.Now(),
+	}
+}

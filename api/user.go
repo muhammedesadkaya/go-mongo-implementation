@@ -29,7 +29,9 @@ func InsertUser(ctx *gin.Context, userRepository repository.UserRepository) {
 		ctx.JSON(500, err)
 	}
 
-	if err = userRepository.Insert(ctx, user); err != nil {
+	newUser := model.NewUser(user.FullName, user.Identity, user.PhoneNumber, user.Email, user.Gender)
+
+	if err = userRepository.Insert(ctx, newUser); err != nil {
 		ctx.JSON(500, err)
 	}
 
